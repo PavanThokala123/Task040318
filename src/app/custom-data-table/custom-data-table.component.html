@@ -1,0 +1,26 @@
+<div class="container example-container mat-elevation-z8">
+  <mat-table class="col-md-6 table table-bordered" #table [dataSource]="dataSource">
+    <ng-container matColumnDef="position">
+      <mat-header-cell class="bg-danger" *matHeaderCellDef> No. </mat-header-cell>
+      <mat-cell style="background-color:rgb(35, 125, 228);color:gainsboro" *matCellDef="let element"> {{element.position}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <mat-header-cell class="bg-danger" *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell style="background-color:rgb(35, 125, 228);color:gainsboro" *matCellDef="let element"> {{element.name}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="department">
+      <mat-header-cell class="bg-danger" *matHeaderCellDef> Department </mat-header-cell>
+      <mat-cell style="background-color:rgb(35, 125, 228);color:gainsboro" *matCellDef="let element"> {{element.department}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="experience">
+      <mat-header-cell class="bg-danger" *matHeaderCellDef> Experience </mat-header-cell>
+      <mat-cell style="background-color:rgb(35, 125, 228);color:gainsboro" *matCellDef="let element"> {{element.experience}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row class="bg-danger" *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row style="background-color:rgb(35, 125, 228);color:gainsboro" *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>
